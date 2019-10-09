@@ -10,4 +10,5 @@
     <dimen name="dp20">20dp</dimen>
     <dimen name="dp30">30dp</dimen>
     <dimen name="dp25">25dp</dimen>
+    <dimen name="dp50">50dp</dimen>
 </resources>

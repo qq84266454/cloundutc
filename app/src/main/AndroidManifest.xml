@@ -40,7 +40,8 @@
             android:theme="@style/Theme.NotFullActivity" />
         <activity android:name=".ui.GoPayActivity" />
         <activity android:name=".ui.PayTimeActivity" />
-        <activity android:name=".ui.BuyVersion2Activity"></activity>
+        <activity android:name=".ui.BuyVersion2Activity" />
+        <activity android:name=".ui.OrderComActivity"></activity>
     </application>
 
 </manifest>

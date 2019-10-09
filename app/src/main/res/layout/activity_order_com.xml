@@ -17,9 +17,9 @@
     </LinearLayout>
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_below="@+id/mViewTop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/mViewTop"
         android:paddingBottom="58dp">
 
         <LinearLayout
@@ -27,36 +27,32 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="@dimen/dp_index_margin"
-            android:paddingRight="@dimen/dp_index_margin"
-            tools:context=".ui.PayTimeActivity">
+            android:paddingRight="@dimen/dp_index_margin">
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40" />
 
-            <include layout="@layout/view_time_count" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp30"
-                android:text="The USDT that you bought is arriving."
-                android:textColor="@color/default_color"
-                android:textSize="18sp" />
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp_10"
-                android:text="98.6%  users will receive the assets in 5 minutes"
-                android:textColor="#ff9ea9c3"
-                android:textSize="12sp" />
+                android:src="@drawable/ic_order_complete" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="Order  complete"
+                android:textColor="#ffed773c"
+                android:textSize="18sp" />
+
 
             <RelativeLayout
+                android:layout_marginTop="@dimen/dp50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginBottom="@dimen/dp_10">
 
                 <TextView
@@ -211,7 +207,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment method"
+                    android:text="Order time"
                     android:textColor="#ff9ea9c3"
                     android:textSize="14sp" />
 
@@ -219,116 +215,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="Alipay"
+                    android:text="2019-10-03 12:15:10"
                     android:textColor="#ff25294e"
                     android:textSize="14sp" />
 
             </RelativeLayout>
-
-            <RelativeLayout
+            <Button
+                android:layout_marginTop="@dimen/dp_40"
+                android:id="@+id/mBtnGet"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginBottom="@dimen/dp_10">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Payee"
-                    android:textColor="#ff9ea9c3"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/mIvCopy4"
-                    android:text="何碎英"
-                    android:textColor="#ff25294e"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:id="@+id/mIvCopy4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:paddingLeft="@dimen/dp_10"
-                    android:src="@drawable/ic_grey" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginBottom="@dimen/dp_10">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Account"
-                    android:textColor="#ff9ea9c3"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/mIvCopy5"
-                    android:text="13676895622  "
-                    android:textColor="#ff25294e"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:id="@+id/mIvCopy5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:paddingLeft="@dimen/dp_10"
-                    android:src="@drawable/ic_grey" />
-            </RelativeLayout>
-
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/dp_12"
+                android:background="@drawable/shape_btn_get"
+                android:elevation="5dp"
+                android:shadowColor="#5cabafc3"
+                android:shadowDx="4"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="My Balance"
+                android:textColor="@color/white" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
         android:background="@color/white"
         android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp20"
-            android:layout_marginRight="24dp"
+            android:layout_centerInParent="true"
             android:src="@drawable/ic_msg" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp25"
-            android:layout_marginRight="@dimen/dp20"
-            android:src="@drawable/ic_call" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FF9EA9C3"
-            android:gravity="center"
-            android:text="Cancel"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/mTvAppeal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FF9EA9C3"
-            android:gravity="center"
-            android:text="Appeal"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-    </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

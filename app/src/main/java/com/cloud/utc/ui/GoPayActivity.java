@@ -71,6 +71,7 @@ public class GoPayActivity extends AppCompatActivity {
                                 .gravity(Gravity.CENTER)
                                 .withClick(R.id.tv_confirm, view1 -> {
                                     startActivity(new Intent(this, PayTimeActivity.class));
+                                    finish();
                                 })
                         )
                         .show();

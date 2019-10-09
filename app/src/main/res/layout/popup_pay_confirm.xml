@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:layout_width="315dp"
+
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="@dimen/dp_index_margin"
+        android:layout_marginBottom="@dimen/dp_index_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textColor="#ff25294e"
+        android:textSize="21sp"
+        />
+    <TextView
+        android:paddingLeft="@dimen/dp_index_margin"
+        android:paddingRight="@dimen/dp_index_margin"
+        android:layout_marginBottom="@dimen/dp_index_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kindly confirm that you have made payment to the seller.Fraudulent attempts will result in the  account being supended."
+        android:textColor="#ff25294e"
+        android:textSize="12sp"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF9EA9C3"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/default_color"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

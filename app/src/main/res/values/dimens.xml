@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_index_margin">30dp</dimen>
+    <dimen name="index_item">96dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="sp30">30sp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+</resources>

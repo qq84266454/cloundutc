@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="463dp"
+    android:background="@drawable/popup_shape"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_index_margin"
+    android:paddingRight="@dimen/dp_index_margin">
+
+    <TextView
+        android:id="@+id/mTvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_12"
+        android:drawableTop="@drawable/ic_arrow_down"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Trade"
+        android:textColor="#ff25294e"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/mIvLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_index_margin"
+            app:srcCompat="@drawable/icon_b" />
+
+        <TextView
+            android:id="@+id/mTvUSDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mIvLabel1"
+            android:text="USDT"
+            android:textColor="#ff9ea9c3"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTvUSDT"
+            android:layout_alignLeft="@+id/mTvUSDT"
+            android:text="29.235689"
+            android:textColor="#ff25294e"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/mIvTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/mIvC"
+            app:srcCompat="@drawable/icon_zhe1" />
+
+        <ImageView
+            android:id="@+id/mIvC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toLeftOf="@id/mTvTG"
+            app:srcCompat="@drawable/icon_group" />
+
+        <TextView
+            android:id="@+id/mTvTG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="TG"
+            android:textColor="#ff9ea9c3"
+            android:textSize="10sp" />
+    </RelativeLayout>
+    <!--椭圆框开始-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginTop="@dimen/dp_index_margin"
+        android:background="@drawable/bg_four_shadow"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp_index_margin">
+
+            <TextView
+                android:id="@+id/mTvAllTG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp_index_margin"
+                android:text="3.549132"
+                android:textColor="#ff25294e"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:text="TG >"
+                android:textColor="#ff9ea9c3"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dotted_line"
+            android:layerType="software" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/dp_index_margin">
+
+            <EditText
+                android:id="@+id/mETNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:paddingLeft="@dimen/dp_index_margin"
+                android:text="5.49132"
+                android:textColor="#ff25294e"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/mIvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/mIvDecrease"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:id="@+id/mIvDecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/mTvAll"
+                app:srcCompat="@drawable/ic_decrease" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_index_margin"
+                android:layout_toLeftOf="@id/mTvAll"
+                android:background="@drawable/dotted_line_vertical"
+                android:layerType="software" />
+
+            <TextView
+                android:id="@+id/mTvAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:text="All"
+                android:textColor="#ff9ea9c3"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--椭圆框结束-->
+    <!--按钮开始-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_index_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mBtnGet"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_get"
+            android:elevation="5dp"
+            android:shadowColor="#5cabafc3"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Get"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/mBtnEnter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_enter"
+            android:elevation="5dp"
+            android:shadowColor="#5cabafc3"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Enter"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <!--按钮结束-->
+</LinearLayout>

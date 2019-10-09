@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash;  设置背景色  &ndash;&gt;-->
+    <!--<item android:id="@android:id/background"-->
+        <!--android:drawable="@drawable/">-->
+    <!--</item>-->
+
+    <!--&lt;!&ndash;  设置进度条颜色  &ndash;&gt;-->
+    <!--<item android:id="@android:id/progress">-->
+        <!--<clip>-->
+
+        <!--</clip>-->
+    <!--</item>-->
+<!--</layer-list>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@android:id/background">
+    <shape>
+        <corners android:radius="4dip" />
+        <solid android:color="#FF4D5070" />
+    </shape>
+</item>
+
+<item android:id="@android:id/progress">
+    <scale android:scaleWidth="100%">
+        <shape>
+            <gradient
+                android:endColor="#FF473DF8"
+                android:startColor="#FF16E0F3" />
+            <corners android:radius="4dp" />
+        </shape>
+    </scale>
+</item>
+
+<item android:id="@android:id/secondaryProgress">
+    <scale android:scaleWidth="100%">
+        <shape>
+            <corners android:radius="5dip" />
+            <solid android:color="#FF16E0F3" />
+        </shape>
+    </scale>
+</item>
+</layer-list>

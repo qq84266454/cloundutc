@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!--标题栏-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/m_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_return"
+        android:paddingRight="16dp"
+         />
+
+    <TextView
+        android:id="@+id/m_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Title"
+        android:textColor="@color/qmui_config_color_black"
+        android:textSize="@dimen/sp30" />
+
+    <ImageView
+        android:id="@+id/m_iv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="16dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:text="保存"
+        android:visibility="gone" />
+</RelativeLayout>

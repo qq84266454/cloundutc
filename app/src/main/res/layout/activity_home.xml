@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/m_ll_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <FrameLayout
+        android:id="@+id/m_fl_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fl_bottom"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+
+        <com.cloud.utc.view.MyCommonTabLayout
+            android:id="@+id/m_bottom_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:clipChildren="false"
+            android:paddingTop="5dp"
+            tl:tl_iconHeight="25dp"
+            tl:tl_iconWidth="30dp"
+            tl:tl_indicator_color="@color/colorPrimary"
+            tl:tl_indicator_height="0dp"
+            tl:tl_textSelectColor="@color/index_selected"
+            tl:tl_textUnselectColor="@color/index_unselected"
+            tl:tl_textsize="12sp"
+            tl:tl_underline_color="@android:color/black"
+            tl:tl_underline_gravity="TOP"
+            tl:tl_underline_height="0dp" />
+    </FrameLayout>
+</RelativeLayout>

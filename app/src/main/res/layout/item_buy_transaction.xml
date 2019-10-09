@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:src="@color/default_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="守望麦田"
+            android:textColor="#ff25294e"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="Trade 14896     Trade rate 99%"
+            android:textColor="#ff9ea9c3"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="56,450.00  CNY"
+            android:textColor="#ff25294e"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_alipay" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp25">
+
+        <TextView
+            android:id="@+id/mTvLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limits 2,000.00-31,087.00  CNY"
+            android:textColor="#ff9ea9c3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTvLimit"
+            android:text="Amount 0.550710 TG"
+            android:textColor="#ff9ea9c3"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/mBtnBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_btn_get"
+            android:elevation="5dp"
+            android:shadowColor="#5cabafc3"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Buy"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dotted_line" />
+</LinearLayout>

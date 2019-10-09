@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_color"
+    android:orientation="vertical"
+    tools:context=".ui.BuyVersion2Activity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/default_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/popup_shape"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_index_margin"
+        android:paddingRight="@dimen/dp_index_margin">
+
+        <ImageView
+            android:id="@+id/mTvClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/dp20"
+            android:src="@drawable/ic_arrow_down" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy BTC"
+                android:textColor="#ff25294e"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mTv1"
+                android:text="56,400.00 CNY"
+                android:textColor="@color/default_color"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_b" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limits 5,000.00-10,096.00 CNY"
+            android:textColor="#ff9ea9c3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:drawableLeft="@drawable/ic_alipay"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="Alipay"
+            android:textColor="#ff25294e"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp_15"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/dp_15"
+                    android:id="@+id/mIvHuan"
+                    android:src="@drawable/ic_huan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/mEt"
+                    android:layout_toRightOf="@id/mIvHuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg_no_select"
+                    android:hint="Maximum 10096.00"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColorHint="#1C1F2527"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_toLeftOf="@id/mTvAll"
+                    android:text="CNY"
+                    android:textColor="#ff25294e"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mTvAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ALL"
+                    android:textColor="@color/default_color"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mTvMax"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_alignLeft="@+id/mEt"
+                    android:layout_below="@id/mEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum 0.179007"
+                    android:textColor="#ffbfc1d2"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:layout_alignTop="@id/mTvMax"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC"
+                    android:textColor="#ff25294e"
+                    android:textSize="13sp"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have to pay to the seller within 15 mins"
+            android:textColor="#ff9ea9c3"
+            android:textSize="12sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_marginRight="@dimen/dp20"
+                android:id="@+id/mBtnCancel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_cancel"
+                android:elevation="5dp"
+                android:shadowColor="#5cabafc3"
+                android:shadowDx="4"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="45s cancle"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/mBtnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_get"
+                android:elevation="5dp"
+                android:shadowColor="#5cabafc3"
+                android:shadowDx="4"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="Submit"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction rules with 致谢大佬们"
+            android:textColor="#ff7d91c2"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="感谢各位大佬对我的新人！每笔订单打款，都由网商银行提款，经过两道银行卡转到您的手中。资金安全可靠请各位大佬尽可放心！打款时间一般3分钟内，如果订单较多情况，可能会延迟2-3分钟！长期收BTC,可加微信*********合作！再次感谢各位大佬对我的照顾与支持！"
+            android:textColor="#ff9ea9c3"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+</LinearLayout>

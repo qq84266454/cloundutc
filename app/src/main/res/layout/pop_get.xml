@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="463dp"
+    android:background="@drawable/popup_shape"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_index_margin"
+    android:paddingRight="@dimen/dp_index_margin">
+
+    <TextView
+        android:id="@+id/mTvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_12"
+        android:drawableTop="@drawable/ic_arrow_down"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Trade"
+        android:textColor="#ff25294e"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please use intoken to transfer to USDT"
+        android:textColor="#ff9ea9c3"
+        android:textSize="12sp"
+        />
+    <!--<item android:width="315dp" android:height="89dp">-->
+        <!--<shape android:shape="rectangle">-->
+            <!--<solid android:color="#ffffffff" />-->
+            <!--<item name="android:shadowDx">6</item>-->
+            <!--<item name="android:shadowDy">7</item>-->
+            <!--<item name="android:shadowColor">#1c1f2527</item>-->
+            <!--<corners android:topLeftRadius="15dp" android:topRightRadius="15dp" android:bottomLeftRadius="15dp" android:bottomRightRadius="15dp" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--CardView开始-->
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="@dimen/dp_index_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_15"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        >
+        <RelativeLayout
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="89dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/mIvInToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_15"
+                app:srcCompat="@drawable/icon_intoken" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/mIvArrow"
+                android:layout_toRightOf="@+id/mIvInToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_12"
+                app:srcCompat="@drawable/arrow_right" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mIvArrow"
+                android:id="@+id/mIvC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_12"
+                app:srcCompat="@drawable/icon_group" />
+
+            <TextView
+                android:textIsSelectable="true"
+                android:id="@+id/mTvToken"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="010987h0752"
+                android:textColor="#ff25294e"
+                android:textSize="11sp" />
+            <ImageView
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_alignRight="@+id/mTvToken"
+                android:layout_below="@+id/mTvToken"
+                app:srcCompat="@drawable/qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+<!--CardView结束-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/mViewCopy"
+        android:layout_marginTop="@dimen/dp_index_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="#FF9EA9C3"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="@dimen/dp1"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/dp1">
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Copy the address"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            />
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,10 +1,12 @@
 package com.cloud.utc.popup;
 
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
+import android.text.Layout;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -72,7 +74,6 @@ public class MyDialogFragment extends DialogFragment {
         params.height = ConvertUtils.dp2px(463);
         params.dimAmount = 0.0f;
         win.setAttributes(params);
-
         ArrayList<BaseFragment> list = new ArrayList<>();
         list.add(new BuyFragment());
         list.add(new GetFragment());
@@ -86,9 +87,14 @@ public class MyDialogFragment extends DialogFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        BusProvider.unregister(this);
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
         BusProvider.getInstance().post(
                 new EventBusInfo<>(EventType.EVENT_CLOSE_BUY_POPUP));
-        BusProvider.unregister(this);
     }
 
     @Subscribe

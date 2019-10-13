@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_sign_in_bg"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="@dimen/dp_60"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textColor="@color/color_login"
+            android:textSize="@dimen/sp30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp50"
+            android:text="back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp30" />
+
+        <include layout="@layout/layout_met_email" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_15">
+
+            <ImageView
+                android:id="@+id/mIvLabel2"
+                android:layout_width="16dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_pwd" />
+
+            <EditText
+                android:id="@+id/mEtPwd"
+                style="@style/style_edit_login_pwd"
+                android:layout_toRightOf="@id/mIvLabel2"
+                android:cursorVisible="true"
+                android:hint="Password"
+                android:imeOptions="actionUnspecified"
+                android:textCursorDrawable="@drawable/cursor_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_below="@+id/mEtPwd"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="#33ffffff" />
+        </RelativeLayout>
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_et_bg_login"-->
+        <!--android:drawableLeft="@drawable/ic_pwd"-->
+        <!--android:drawablePadding="@dimen/dp_10"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:hint="Password"-->
+        <!--android:maxLines="1"-->
+        <!--android:paddingBottom="@dimen/dp_15"-->
+        <!--android:textColorHint="@color/white"-->
+        <!--android:textSize="16sp" />-->
+
+        <Button
+            android:id="@+id/mTvSignIn"
+            android:layout_width="116dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/bg_login_btn"
+            android:text="Sign in"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:layout_width="90dp"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginLeft="@dimen/dp_60"-->
+        <!--android:layout_marginBottom="@dimen/login_float_margin_bottom"-->
+        <!--android:src="@drawable/ic_login_circle" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:paddingLeft="@dimen/dp_60"
+        android:paddingRight="@dimen/dp_60">
+
+        <TextView
+            android:id="@+id/mTvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_sign_right"
+            android:drawablePadding="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            android:text="Sign up"
+            android:textColor="@color/color_login"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mTvForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_10"
+            android:text=" Forgot passwords"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,97 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mViewHashRate"
-    android:orientation="vertical"
-    android:paddingTop="@dimen/dp_15"
-    android:layout_marginBottom="@dimen/dp_15"
+    android:layout_width="match_parent"
+    android:layout_height="139dp"
     android:layout_marginLeft="@dimen/dp_index_margin"
     android:layout_marginRight="@dimen/dp_index_margin"
-    android:layout_width="match_parent"
-    android:background="@drawable/bg_buy2"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="109dp">
+    android:layout_marginBottom="@dimen/dp_15"
+    android:background="@drawable/shadow_white_x2_y2"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_15">
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
             <ImageView
-                android:layout_marginRight="@dimen/dp_index_margin"
-                android:layout_marginLeft="@dimen/dp_index_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_index_margin"
+                android:layout_marginRight="@dimen/dp_index_margin"
                 app:srcCompat="@drawable/icon_watch" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hashrate"
                 android:textColor="#ff9ea9c3"
-                android:textSize="10sp"
-                />
+                android:textSize="10sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="788"
                 android:textColor="#ff25294e"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Team hashrate"
                 android:textColor="#ff9ea9c3"
-                android:textSize="10sp"
-                />
+                android:textSize="10sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="222"
                 android:textColor="#ff25294e"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@drawable/dotted_line"
-        android:layout_height="2dp"
-        android:layerType="software"
-        android:layout_width="match_parent" />
+        android:layerType="software" />
+
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Prospective earnings "
             android:textColor="#ff9ea9c3"
-            android:textSize="13sp"
-            />
+            android:textSize="13sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="24.234565 TG"
+            android:text="24.234565 G"
             android:textColor="#ff25294e"
-            android:textSize="13sp"
-            />
+            android:textSize="13sp" />
     </LinearLayout>
 </LinearLayout>

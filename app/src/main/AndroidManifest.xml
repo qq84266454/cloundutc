@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cloud.utc">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,11 +28,13 @@
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".test.TestActivity"
@@ -41,7 +49,31 @@
         <activity android:name=".ui.GoPayActivity" />
         <activity android:name=".ui.PayTimeActivity" />
         <activity android:name=".ui.BuyVersion2Activity" />
-        <activity android:name=".ui.OrderComActivity"></activity>
+        <activity android:name=".ui.OrderComActivity" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity2"
+            android:label="@string/title_activity_login2" />
+        <activity android:name=".ui.login.SignUpActivity" />
+        <activity android:name=".ui.login.PwdForgottenActivity" />
+        <activity android:name=".ui.login.PwdForgottenCodeActivity" />
+        <activity android:name=".ui.login.PwdForgottenPwdActivity"></activity>
+        <activity android:name=".ui.me.IdentityCompleteActivity" />
+        <activity android:name=".ui.me.IdentityResultActivity" />
+        <activity android:name=".ui.me.AlipaySettingActivity" />
+        <activity android:name=".ui.me.PayMethodActivity" />
+        <activity android:name=".ui.me.IdentityInputActivity" />
+        <activity android:name=".ui.me.BankSettingActivity" />
+        <activity android:name=".ui.me.HashRateTeamActivity" />
     </application>
 
 </manifest>

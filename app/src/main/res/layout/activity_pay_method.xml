@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp30"
+    android:paddingRight="@dimen/dp30">
+
+    <include layout="@layout/layout_top" />
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_marginTop="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="27dp"
+        android:paddingRight="@dimen/dp30"
+        android:paddingBottom="27dp">
+
+        <ImageView
+            android:id="@+id/mIvBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bank" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/mIvBank"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/mIvBank"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="光大银行"
+                android:textColor="#ff9ea9c3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6226 6269 3656 2896"
+                android:textColor="#ff25294e"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.zcw.togglebutton.ToggleButton
+            android:layout_width="28dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"></com.zcw.togglebutton.ToggleButton>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="27dp"
+        android:paddingRight="@dimen/dp30"
+        android:paddingBottom="27dp">
+
+        <ImageView
+            android:id="@+id/mIvPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alipay" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/mIvPay"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/mIvPay"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alipay"
+                android:textColor="#ff9ea9c3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18823568956"
+                android:textColor="#ff25294e"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <com.zcw.togglebutton.ToggleButton
+            android:layout_width="28dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"></com.zcw.togglebutton.ToggleButton>
+    </RelativeLayout>
+</LinearLayout>

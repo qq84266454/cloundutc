@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_index_margin"
+    android:paddingRight="@dimen/dp_index_margin">
+
+    <include layout="@layout/layout_top" />
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/mIvLabel1"
+            android:layout_width="16dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_identify_person" />
+
+        <EditText
+            android:id="@+id/mEtName"
+            style="@style/style_edit_identity"
+            android:layout_toRightOf="@id/mIvLabel1"
+            android:cursorVisible="true"
+            android:hint="Name"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@+id/mEtName"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="#FFEAEBEF" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/mIvLabel2"
+            android:layout_width="16dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_identify_pwd" />
+
+        <EditText
+            android:id="@+id/mEtPwd"
+            style="@style/style_edit_identity"
+            android:layout_toRightOf="@id/mIvLabel2"
+            android:cursorVisible="true"
+            android:hint="Passort or number"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@+id/mEtPwd"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="#FFEAEBEF" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/mIvLabel3"
+            android:layout_width="16dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_identify_camera" />
+
+        <EditText
+            android:id="@+id/mEtPhoto1"
+            style="@style/style_edit_identity"
+            android:layout_toRightOf="@id/mIvLabel3"
+            android:cursorVisible="true"
+            android:hint="Front photo of id card"
+            android:textCursorDrawable="@drawable/cursor_color" />
+        <ImageView
+            android:id="@+id/mIvPhoto"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_identify_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@+id/mEtPhoto1"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="#FFEAEBEF" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/mIvLabel4"
+            android:layout_width="16dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_identify_card" />
+
+        <EditText
+            android:id="@+id/mEtBankCard"
+            style="@style/style_edit_identity"
+            android:layout_toRightOf="@id/mIvLabel4"
+            android:cursorVisible="true"
+            android:hint="Back of card"
+            android:textCursorDrawable="@drawable/cursor_color" />
+        <ImageView
+            android:id="@+id/mIvBankCard"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_identify_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@+id/mEtBankCard"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="#FFEAEBEF" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mBtnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@drawable/shape_btn_get"
+        android:elevation="5dp"
+        android:shadowColor="#5cabafc3"
+        android:shadowDx="4"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Submit"
+        android:textColor="@color/white" />
+</LinearLayout>

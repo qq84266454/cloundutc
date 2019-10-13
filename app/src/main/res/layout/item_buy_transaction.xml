@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/mTvLimit"
-            android:text="Amount 0.550710 TG"
+            android:text="Amount 0.550710 G"
             android:textColor="#ff9ea9c3"
             android:textSize="12sp" />
 

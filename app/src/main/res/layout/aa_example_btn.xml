@@ -3,16 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-        android:id="@+id/mBtnGet"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginRight="@dimen/dp_12"
-        android:background="@drawable/shape_btn_get"
-        android:elevation="5dp"
-        android:shadowColor="#5cabafc3"
-        android:shadowDx="4"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="Get"
-        android:textColor="@color/white" />
+    android:id="@+id/mBtnGet"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:layout_marginRight="@dimen/dp_12"
+    android:background="@drawable/shape_btn_get"
+    android:elevation="5dp"
+    android:shadowColor="#5cabafc3"
+    android:shadowDx="4"
+    android:shadowDy="5"
+    android:shadowRadius="5"
+    android:text="Get"
+    android:textColor="@color/white" />
 </LinearLayout>

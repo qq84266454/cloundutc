@@ -39,6 +39,7 @@ public class OrderComActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.m_iv_back:
+                finish();
                 break;
             case R.id.mBtnGet:
                 break;

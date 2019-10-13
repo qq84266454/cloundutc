@@ -32,10 +32,10 @@ public class HomeActivity extends BaseActivity {
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private int[] mIconUnselectedIds = {
             R.drawable.icon_qianbao, R.drawable.icon_zhuxing,
-            R.drawable.icon_zhexian, R.drawable.icon_photo};
+            R.drawable.icon_zhexian, R.drawable.icon_order,R.drawable.icon_me};
     private int[] mIconSelectIds = {
             R.drawable.icon_qianbao, R.drawable.icon_zhuxing,
-            R.drawable.icon_zhexian, R.drawable.icon_photo};
+            R.drawable.icon_get_select, R.drawable.icon_order,R.drawable.icon_me};
     private int mCurrentFragmentIndex = 0;
 
     @Override
@@ -49,7 +49,7 @@ public class HomeActivity extends BaseActivity {
 
     private void initView() {
         initFragment();
-        mTitles = new String[]{"Balances", "Transaction", "Order", "Settings"};
+        mTitles = new String[]{"Balances", "Transaction", "Order", "Settings","Me"};
         initTabItem();
     }
     private void initTabItem() {
@@ -57,6 +57,7 @@ public class HomeActivity extends BaseActivity {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectedIds[i]));
         }
         mBottomNavigationBar.setTabData(mTabEntities, this, R.id.m_fl_content_container, mFragments);
+
         mBottomNavigationBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
@@ -77,6 +78,7 @@ public class HomeActivity extends BaseActivity {
         mFragments.add(HomeFactory.getFragment(1));
         mFragments.add(HomeFactory.getFragment(2));
         mFragments.add(HomeFactory.getFragment(3));
+        mFragments.add(HomeFactory.getFragment(4));
     }
 
     /**

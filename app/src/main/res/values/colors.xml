@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
     <color name="index_selected">#FF3E4ABE</color>
     <color name="index_unselected">#FF9EA9C3</color>
     <color name="zhe1">#FFED773C</color>
@@ -12,4 +13,8 @@
     <color name="unselect_style_2">#FF737C91</color>
     <color name="text_hint">#FFBFC1D2</color>
     <color name="color_shadow">#1C1F2527</color>
+    <color name="color_login">#fffc9a26</color>
+    <color name="general_divider">#ffeaebef</color>
+    <color name="general_black">#FF25294E</color>
+    <color name="edit_text_label_color">#ff9ea9c3</color>
 </resources>

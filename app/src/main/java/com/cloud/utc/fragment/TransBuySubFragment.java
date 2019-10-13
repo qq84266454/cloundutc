@@ -53,7 +53,6 @@ public class TransBuySubFragment extends BaseFragment {
             list.add(new HashDetail());
         }
         mAdapter.setNewData(list);
-
         mRv.setAdapter(mAdapter);
     }
 

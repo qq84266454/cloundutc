@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="463dp"
-    android:background="@drawable/popup_shape"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="@dimen/dp_index_margin"
     android:paddingRight="@dimen/dp_index_margin">
@@ -50,6 +49,7 @@
             android:textSize="10sp" />
 
         <TextView
+            android:id="@+id/mTvAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/mTvUSDT"
@@ -65,7 +65,7 @@
             android:layout_marginTop="@dimen/dp_12"
             android:layout_marginRight="20dp"
             android:layout_toLeftOf="@+id/mIvC"
-            app:srcCompat="@drawable/icon_zhe1" />
+            app:srcCompat="@drawable/ic_arrow_buy" />
 
         <ImageView
             android:id="@+id/mIvC"
@@ -81,16 +81,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="TG"
+            android:text="G"
             android:textColor="#ff9ea9c3"
             android:textSize="10sp" />
     </RelativeLayout>
     <!--椭圆框开始-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="98dp"
+        android:layout_height="120dp"
         android:layout_marginTop="@dimen/dp_index_margin"
-        android:background="@drawable/bg_four_shadow"
+        android:background="@drawable/shadow_6_7_all"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -100,7 +100,9 @@
             android:orientation="horizontal"
             android:paddingRight="@dimen/dp_index_margin">
 
-            <TextView
+            <EditText
+                android:imeOptions="actionUnspecified"
+                android:background="@null"
                 android:id="@+id/mTvAllTG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,7 +118,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_gravity="right"
-                android:text="TG >"
+                android:text="G >"
                 android:textColor="#ff9ea9c3"
                 android:textSize="10sp" />
         </RelativeLayout>
@@ -197,27 +199,29 @@
             android:layout_marginRight="@dimen/dp_12"
             android:layout_weight="1"
             android:background="@drawable/shape_btn_get"
-            android:elevation="5dp"
-            android:shadowColor="#5cabafc3"
-            android:shadowDx="4"
-            android:shadowDy="5"
-            android:shadowRadius="5"
             android:text="Get"
             android:textColor="@color/white" />
-
         <Button
-            android:id="@+id/mBtnEnter"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@drawable/shape_btn_enter"
-            android:elevation="5dp"
-            android:shadowColor="#5cabafc3"
-            android:shadowDx="4"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Enter"
-            android:textColor="@color/white" />
+        android:id="@+id/mBtnEnter"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_btn_enter"
+        android:text="Enter"
+        android:textColor="@color/white" />
+        <!--<Button-->
+            <!--android:id="@+id/mBtnEnter"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_btn_enter"-->
+            <!--android:elevation="5dp"-->
+            <!--android:shadowColor="#5cabafc3"-->
+            <!--android:shadowDx="4"-->
+            <!--android:shadowDy="5"-->
+            <!--android:shadowRadius="5"-->
+            <!--android:text="Enter"-->
+            <!--android:textColor="@color/white" />-->
     </LinearLayout>
     <!--按钮结束-->
 </LinearLayout>

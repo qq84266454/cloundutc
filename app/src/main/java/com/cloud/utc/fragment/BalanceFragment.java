@@ -69,7 +69,7 @@ public class BalanceFragment extends HomeBaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mBtnBuy:
-                this.px = QMUIDisplayHelper.dpToPx(185);
+                this.px = QMUIDisplayHelper.dp2px(getContext(),185);
                 transRoot();
 //                showBuyPopup();
                 openTradeDialog();
@@ -84,8 +84,6 @@ public class BalanceFragment extends HomeBaseFragment {
      * 打开TradeDialog
      */
     private void openTradeDialog() {
-//        startActivity(new Intent(getActivity(), TestFragmentActivity.class));
-////        getActivity().overridePendingTransition(R.anim.slide_in_bottom, 0);
         tradeDialog = new MyDialogFragment();
         tradeDialog.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "dialog");
     }

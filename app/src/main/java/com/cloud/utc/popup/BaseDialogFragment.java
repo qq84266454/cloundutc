@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseDialogFragment extends DialogFragment {
 
-    private int dpValue = 463;
+    private int dpValue = 0;
 
     public BaseDialogFragment() {
         // Required empty public constructor
@@ -55,8 +55,10 @@ public abstract class BaseDialogFragment extends DialogFragment {
         params.gravity = Gravity.BOTTOM;
         // 使用ViewGroup.LayoutParams，以便Dialog 宽度充满整个屏幕
         params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-//        params.height = ConvertUtils.dp2px(dpValue);
-        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        if (dpValue != 0)
+            params.height = ConvertUtils.dp2px(dpValue);
+        else
+            params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
         params.dimAmount = 0.0f;
         win.setAttributes(params);
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="637dp"
+    android:background="@drawable/shadow_one"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_index_margin"
+    android:paddingRight="@dimen/dp_index_margin">
+
+    <TextView
+        android:id="@+id/mTvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_12"
+        android:drawableTop="@drawable/ic_arrow_down"
+        android:padding="@dimen/dp_5"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Select type of payment"
+        android:textColor="#ff25294e"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

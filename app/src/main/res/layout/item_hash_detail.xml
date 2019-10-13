@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/mTvEarning"
                 android:layout_alignRight="@+id/mTvEarning"
-                android:text="24.658569 TG"
+                android:text="24.658569 G"
                 android:textColor="#ff25294e"
                 android:textSize="15sp" />
         </RelativeLayout>

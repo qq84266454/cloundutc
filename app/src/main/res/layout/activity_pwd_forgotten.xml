@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_index_margin"
+    android:paddingRight="@dimen/dp_index_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/layout_top" />
+        <include layout="@layout/top_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_index_margin"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp_index_margin"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp50"
+            android:text="Find\npasswords"
+            android:textColor="#ff25294e"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_60"
+            android:layout_marginBottom="@dimen/dp_15">
+
+            <ImageView
+                android:id="@+id/mIvLabel1"
+                android:layout_width="16dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_email" />
+
+            <EditText
+                android:id="@+id/mEtEmail"
+                style="@style/style_edit_login_pwd"
+                android:layout_toRightOf="@id/mIvLabel1"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColor="#25294E"
+                android:textColorHint="#25294E" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_below="@+id/mEtEmail"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/general_divider" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mBtnNext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="47dp"
+            android:background="@drawable/shape_btn_get"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:shadowColor="#5cabafc3"
+            android:shadowDx="4"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:textColor="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_arrow_white_right"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="Sent verifacation code"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mIvFloat"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/login_float_margin_bottom"
+        android:src="@drawable/ic_login_circle" />
+</RelativeLayout>

@@ -27,6 +27,8 @@ public class BuyBasePopup extends BasePopupWindow {
     TextView mTvClose;
     @BindView(R.id.mETNumber)
     EditText mETNumber;
+    @BindView(R.id.mTvAmount)
+    TextView mTvAmount;
     private Context context;
 
     public BuyBasePopup(Context context) {
@@ -72,7 +74,7 @@ public class BuyBasePopup extends BasePopupWindow {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mTvClose:
-                closeType = 0;
+                closeType = 1;
                 dismiss();
                 break;
             case R.id.mBtnGet:

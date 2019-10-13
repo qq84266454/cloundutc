@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:paddingLeft="@dimen/dp_10"
-                    android:src="@drawable/ic_grey" />
+                    android:src="@drawable/ic_copy" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:paddingLeft="@dimen/dp_10"
-                    android:src="@drawable/ic_grey" />
+                    android:src="@drawable/ic_copy" />
             </RelativeLayout>
 
             <TextView

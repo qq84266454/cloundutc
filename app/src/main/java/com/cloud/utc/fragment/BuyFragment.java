@@ -15,7 +15,6 @@ import com.cloud.utc.R;
 import com.cloud.utc.event.BusProvider;
 import com.cloud.utc.event.EventBusInfo;
 import com.cloud.utc.event.EventType;
-import com.cloud.utc.fragment.HomeBaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,6 +49,8 @@ public class BuyFragment extends HomeBaseFragment {
     Button mBtnEnter;
     @BindView(R.id.mTvAllTG)
     TextView mTvAllTG;
+    @BindView(R.id.mTvAmount)
+    TextView mTvAmount;
 
     @Override
     protected void initData() {
@@ -95,27 +96,27 @@ public class BuyFragment extends HomeBaseFragment {
     }
 
     private void putAllTG() {
+        Double amount = Double.valueOf(mTvAmount.getText().toString());
         Double before = Double.valueOf(mETNumber.getText().toString());
         Double all = Double.valueOf(mTvAllTG.getText().toString());
-        mETNumber.setText(String.valueOf(before + all));
-        mTvAllTG.setText(String.valueOf(0));
+        mETNumber.setText(String.valueOf(amount));
     }
 
     private void addOrDecrease(int flag) {
         Double before = Double.valueOf(mETNumber.getText().toString());
-        Double all = Double.valueOf(mTvAllTG.getText().toString());
-        if (flag == 0 && all > 1) {
+        Double all = Double.valueOf(mTvAmount.getText().toString());
+        if (flag == 0 && before + 1 < all) {
             // 增加
             ++before;
-            --all;
-        } else if (flag == 1 && before > 1) {
+//            --all;
+        } else if (flag == 1 && before - 1 > 0) {
             --before;
-            ++all;
+//            ++all;
         } else {
             return;
         }
         mETNumber.setText(String.valueOf(before));
-        mTvAllTG.setText(String.valueOf(all));
+//        mTvAllTG.setText(String.valueOf(all));
     }
 
 }

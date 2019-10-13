@@ -1,5 +1,7 @@
 package com.cloud.utc.base;
 
-public class Constants {
-    public static int POP_DURATION = 400;
+public interface Constants {
+    int POP_DURATION = 400;
+
+    String ACESS_TOKEN = "access_token";
 }

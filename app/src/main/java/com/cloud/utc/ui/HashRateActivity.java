@@ -1,6 +1,8 @@
 package com.cloud.utc.ui;
 
+import android.animation.ValueAnimator;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -105,10 +107,25 @@ public class HashRateActivity extends BaseActivity {
             ViewGroup.LayoutParams layoutParams = barView.getLayoutParams();
             layoutParams.height = BarUtils.getStatusBarHeight();
             barView.setLayoutParams(layoutParams);
-
         }
-    }
+        setAnimation(progressBar,40);
 
+    }
+    private void setAnimation(final ProgressBar view, final int mProgressBar) {
+        ValueAnimator animator = ValueAnimator.ofInt(0, mProgressBar).setDuration(1000);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                LogUtils.e((int)valueAnimator.getAnimatedValue());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    view.setProgress((Integer) valueAnimator.getAnimatedValue(),true);
+                }else {
+                    view.setProgress((Integer) valueAnimator.getAnimatedValue());
+                }
+            }
+        });
+        animator.start();
+    }
     @OnClick({R.id.m_iv_back, R.id.m_tv_title, R.id.mTvDetail})
     public void onViewClicked(View view) {
         switch (view.getId()) {

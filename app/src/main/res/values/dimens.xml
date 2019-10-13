@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dp_index_margin">30dp</dimen>
-    <dimen name="index_item">96dp</dimen>
+    <dimen name="index_item">110dp</dimen>
     <dimen name="dp_15">15dp</dimen>
     <dimen name="dp_12">12dp</dimen>
     <dimen name="dp_5">5dp</dimen>
@@ -11,4 +11,9 @@
     <dimen name="dp30">30dp</dimen>
     <dimen name="dp25">25dp</dimen>
     <dimen name="dp50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="login_float_margin_bottom">90dp</dimen>
 </resources>

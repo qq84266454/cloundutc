@@ -4,6 +4,7 @@ package com.cloud.utc.factory;
 import com.cloud.utc.fragment.BalanceFragment;
 import com.cloud.utc.fragment.HomeBaseFragment;
 import com.cloud.utc.fragment.TransactionFragment;
+import com.cloud.utc.ui.me.MeFragment;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -47,6 +48,9 @@ public class HomeFactory {
                 // 消息的 fragment
                 fragment = new TransactionFragment();
 //                fragment = new NewHomeLookFragment();
+                break;
+            case 4:
+                fragment = new MeFragment();
                 break;
         }
 

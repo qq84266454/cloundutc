@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="@dimen/dp30"
-    android:background="@color/white"
+    android:background="@color/general_bg"
     android:paddingRight="@dimen/dp30">
     <include layout="@layout/layout_top" />
     <include layout="@layout/top_bar" />

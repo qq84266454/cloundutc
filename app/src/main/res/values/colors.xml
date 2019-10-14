@@ -17,4 +17,5 @@
     <color name="general_divider">#ffeaebef</color>
     <color name="general_black">#FF25294E</color>
     <color name="edit_text_label_color">#ff9ea9c3</color>
+    <color name="general_bg">#fff6f8f9</color>
 </resources>

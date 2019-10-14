@@ -2,14 +2,9 @@ package com.cloud.utc.http;
 
 import android.support.annotation.NonNull;
 
-import com.blankj.utilcode.util.AppUtils;
-import com.blankj.utilcode.util.DeviceUtils;
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.SPUtils;
-import com.blankj.utilcode.util.SpanUtils;
 import com.cloud.utc.base.Constants;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 
@@ -61,7 +56,7 @@ public class NetworkInterceptor implements Interceptor {
 //                .header("osVersion", DeviceUtils.getModel() + "")
 //                .header("appType", "1")
 //                .header("appVersion", AppUtils.getAppVersionCode() + "")
-                .header(Constants.ACESS_TOKEN, SPUtils.getInstance().getString(Constants.ACESS_TOKEN))
+                .header(Constants.ACCESS_TOKEN, "Bearer " + SPUtils.getInstance().getString(Constants.ACCESS_TOKEN))
                 .build();
         if (NetworkUtils.isAvailable()) {
             request = request.newBuilder()

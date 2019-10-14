@@ -12,7 +12,7 @@
         android:background="@drawable/bg_me_info"
         android:orientation="vertical"
         android:paddingLeft="@dimen/dp30"
-        android:paddingRight="@dimen/dp_index_margin">
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -28,9 +28,10 @@
                 android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/mTvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lisa"
+                android:text="Null"
                 android:textColor="#ffffffff"
                 android:textSize="16sp" />
 
@@ -57,9 +58,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:maxLines="1"
+                android:id="@+id/mTvNodeValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 153PkjLji56Bhuicl68L24A56Jbg5I6"
+                android:text="153PkjLji56Bhuicl68L24A56Jbg5I6"
                 android:textColor="#ffffffff"
                 android:textSize="16sp" />
 
@@ -80,7 +83,8 @@
             android:textSize="14sp" />
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:paddingRight="@dimen/dp_index_margin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10"
             android:orientation="horizontal">
@@ -133,6 +137,7 @@
         <!--app:sLeftTvDrawableLeft="@drawable/ic_person"-->
         <!--app:sRightTvDrawableRight="@drawable/ic_arrow_right" />-->
         <LinearLayout
+            android:gravity="center_vertical"
             android:id="@+id/mViewIdentity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -155,6 +160,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="center_vertical"
             android:id="@+id/mViewHashTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -177,6 +183,8 @@
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="center_vertical"
+
             android:id="@+id/mViewPay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -193,18 +201,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_12"
                 android:drawableRight="@drawable/ic_arrow_right"
-                android:text="Paymengt"
+                android:text="Payment"
                 android:textColor="#ff25294e"
                 android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="center_vertical"
             android:id="@+id/mViewAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
+                android:layout_marginTop="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_me_diamond" />

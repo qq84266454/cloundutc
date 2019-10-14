@@ -42,7 +42,6 @@ public class TransBuyFragment extends BaseFragment {
     private void initView() {
         String[] mTitles = new String[]{"BTC", "ETH", "USDT", "XPR", "LTC"};
         for (int i = 0; i < mTitles.length; i++) {
-            LogUtils.e(i);
             TransBuySubFragment fragment = new TransBuySubFragment();
             mFragments.add(fragment);
         }

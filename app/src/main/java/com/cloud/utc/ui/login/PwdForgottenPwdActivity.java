@@ -25,7 +25,7 @@ public class PwdForgottenPwdActivity extends BaseActivity {
         mTvTitle.setVisibility(View.GONE);
     }
 
-    @OnClick({R.id.m_iv_back, R.id.mBtnNext, R.id.mIvFloat})
+    @OnClick({R.id.m_iv_back, R.id.mBtnNext})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.m_iv_back:
@@ -33,8 +33,6 @@ public class PwdForgottenPwdActivity extends BaseActivity {
                 break;
             case R.id.mBtnNext:
                 finish();
-                break;
-            case R.id.mIvFloat:
                 break;
         }
     }

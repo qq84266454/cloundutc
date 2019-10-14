@@ -3,7 +3,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.cloud.utc"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -42,6 +42,7 @@ dependencies {
     def qmui_arch_version = '0.6.1'
     implementation "com.qmuiteam:arch:$qmui_arch_version"
     annotationProcessor "com.qmuiteam:arch-compiler:$qmui_arch_version"
+    implementation 'com.qmuiteam:qmui:1.4.0'
     // use annotationProcessor if java
     implementation 'com.github.razerdp:BasePopup:2.2.1'
     //    implementation 'com.github.razerdp:BasePopup-compat-androidx:2.2.1'
@@ -62,4 +63,13 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.2.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation("com.github.hotchemi:permissionsdispatcher:3.3.2") {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.3.2"
+//    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.4'
+    implementation 'com.ypx.yimagepicker:support:2.4.2'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:3.7.0'
 }

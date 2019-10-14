@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/general_bg"
     android:orientation="vertical"
     android:paddingLeft="@dimen/dp30"
     android:paddingRight="@dimen/dp30">
@@ -22,13 +22,13 @@
         android:paddingBottom="27dp">
 
         <ImageView
+            android:paddingTop="1dp"
             android:id="@+id/mIvBank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_bank" />
 
         <LinearLayout
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/mIvBank"
@@ -54,7 +54,7 @@
         <com.zcw.togglebutton.ToggleButton
             android:layout_width="28dp"
             android:layout_height="15dp"
-            android:layout_alignParentRight="true"></com.zcw.togglebutton.ToggleButton>
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -67,6 +67,7 @@
         android:paddingBottom="27dp">
 
         <ImageView
+            android:paddingTop="2dp"
             android:id="@+id/mIvPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

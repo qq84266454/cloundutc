@@ -34,7 +34,7 @@ public class ApiRequest {
     private Retrofit retrofit;
 
     private ApiRequest() {
-        OkHttpClient client = null;
+        OkHttpClient client;
         NetworkInterceptor mNetworkInterceptor = new NetworkInterceptor();
         Dispatcher dispatcher = new Dispatcher(Executors.newFixedThreadPool(20));
         dispatcher.setMaxRequests(20);
@@ -60,6 +60,7 @@ public class ApiRequest {
                 .build();
         retrofit = new Retrofit.Builder()
                 .baseUrl(InterfaceParameters.BASE_URL)
+                .addConverterFactory(NobodyConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

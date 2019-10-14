@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextPaint;
 import android.view.LayoutInflater;
+import android.widget.TextView;
 
 
 /**
@@ -84,14 +86,12 @@ public class UIUtils {
 
     /**
      * dp转为像素
-     *
      */
 //    public static int dip2px(int dip) {
 //
 //        final float density = getResources().getDisplayMetrics().density;
 //        return (int) (dip * density + 0.5f);
 //    }
-
     public static int px2sp(Context context, float pxValue) {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
         return (int) (pxValue / fontScale + 0.5f);
@@ -159,7 +159,6 @@ public class UIUtils {
 //        String str = UIUtils.getResources().getString(strResId);
 //        return str;
 //    }
-
     public static void startActivity(AppCompatActivity act, Intent intent) {
         if (act == null) {
             return;
@@ -210,5 +209,8 @@ public class UIUtils {
 //        }
 //        return layoutInflater.inflate(resId, parent, false);
 //    }
-
+    public static void setBoldOrNot(TextView textView, boolean isBold) {
+        TextPaint paint = textView.getPaint();
+        paint.setFakeBoldText(isBold);
+    }
 }

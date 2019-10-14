@@ -22,6 +22,14 @@ public abstract class BaseChartEntity<T extends Entry> {
 
     protected BarLineChartBase mChart;
 
+    public List<T>[] getmEntries() {
+        return mEntries;
+    }
+
+    public void setmEntries(List<T>[] mEntries) {
+        this.mEntries = mEntries;
+    }
+
     protected List<T>[] mEntries;
     protected String[] labels;
     protected int []mChartColors;
@@ -209,7 +217,7 @@ public abstract class BaseChartEntity<T extends Entry> {
 
     }
 
-    protected abstract void setChartData();
+    public abstract void setChartData();
 
 
     /**

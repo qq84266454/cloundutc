@@ -31,6 +31,7 @@ public class IdentityResultActivity extends BaseActivity {
         initView();
         initStatus();
         mTvTitle.setText("Identification");
+        setBg(R.color.general_bg);
 //        QMUILinearLayout layout = new QMUILinearLayout(this);
 //        layout.setRadiusAndShadow();
     }

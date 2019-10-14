@@ -1,23 +1,19 @@
 package com.cloud.utc.http;
 
 
-
+import com.cloud.utc.bean.IdentificationResp;
+import com.cloud.utc.bean.LoginReq;
+import com.cloud.utc.bean.LoginResp;
+import com.cloud.utc.bean.NoBodyModel;
 import com.cloud.utc.bean.SignUpReq;
 import com.cloud.utc.bean.SignUpResp;
+import com.cloud.utc.bean.UserInfoResp;
 
-import java.util.List;
 
-import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.Multipart;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Part;
-import retrofit2.http.PartMap;
-import retrofit2.http.Query;
-import retrofit2.http.QueryMap;
 
 /**
  * Created by ex-lvchaofeng001 on 2017/8/11.
@@ -25,21 +21,39 @@ import retrofit2.http.QueryMap;
 
 public interface ApiService {
     @POST("users")
-    Call<SignUpResp> doLogin(@Body SignUpReq requestBean);
-//
-//    @POST("api/check/imageappbase64")
-//    Call<BaseModel<String>> changeCode(@Body LoginRequestBean requestBean);
-//
-//    @POST("phonecheck/createcheck")
-//    Call<BaseModel> createCheck(@Body CreateCheckRequestBean requestBean);
-//
-//    @POST("api/pushmsg/querymsgbyuseranddate")
-//    Call<BaseModel<List<PushModel2>>> doRequestMsg();
-//
-//    @POST("api/onekeycall/applysecurityphonenumber")
-//    Call<BaseModel> doRequestPhone(@Body PhoneRequestBean requestBean);
-//
-//    @POST("api/onekeycall/contactresult")
+    Call<SignUpResp> doSignUp(@Body SignUpReq requestBean);
+
+
+    // 用户信息接口
+    @GET("user")
+    Call<UserInfoResp> doGetUser();
+
+    ////
+    @POST("authorizations")
+    Call<LoginResp> doSignIn(@Body LoginReq req);
+
+    // 身份识别接口
+    @GET("identification")
+    Call<IdentificationResp> doIdentification();
+
+
+    // 发送邮件接口
+    @POST("password/code")
+    Call<NoBodyModel> doPasswordCode(@Body LoginReq req);
+
+    @POST("password/reset")
+    Call<NoBodyModel> doPasswordReset(@Body LoginReq req);
+////
+////    @POST("phonecheck/createcheck")
+////    Call<BaseModel> createCheck(@Body CreateCheckRequestBean requestBean);
+////
+////    @POST("api/pushmsg/querymsgbyuseranddate")
+////    Call<BaseModel<List<PushModel2>>> doRequestMsg();
+////
+////    @POST("api/onekeycall/applysecurityphonenumber")
+////    Call<BaseModel> doRequestPhone(@Body PhoneRequestBean requestBean);
+////
+////    @POST("api/onekeycall/contactresult")
 //    Call<BaseModel> doContactResult(@Body ContactResultRequestBean resultRequestBean);
 //
 //

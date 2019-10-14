@@ -39,6 +39,7 @@ public class PayMethodActivity extends BaseActivity {
         ButterKnife.bind(this);
         initStatus();
         initView();
+        setBg(R.color.general_bg);
     }
 
     protected void initView() {

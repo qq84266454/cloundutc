@@ -4,6 +4,7 @@ import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,6 @@ import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import java.util.ArrayList;
@@ -58,6 +58,17 @@ public class HashRateActivity extends BaseActivity {
     TextView mTvLabel3;
     @BindView(R.id.line_chart)
     LineChart lineChart;
+    @BindView(R.id.mTvDay)
+    TextView mTvDay;
+    @BindView(R.id.mIvMonth)
+    ImageView mIvMonth;
+    @BindView(R.id.mTvMonth)
+    TextView mTvMonth;
+    @BindView(R.id.mIvYear)
+    ImageView mIvYear;
+    @BindView(R.id.mTvYear)
+    TextView mTvYear;
+    private LineChartEntity entity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,28 +77,43 @@ public class HashRateActivity extends BaseActivity {
         ButterKnife.bind(this);
         initView();
         lineChart();
+        setChartLabel(1);
+    }
+
+    /**
+     * @param Type 0 选中Day,1 选中Month,2选中year
+     */
+    private void setChartLabel(int Type) {
+        mTvDay.setTextColor(Color.parseColor("#ff9ea9c3"));
+        mTvMonth.setTextColor(Color.parseColor("#ff9ea9c3"));
+        mTvYear.setTextColor(Color.parseColor("#ff9ea9c3"));
+        switch (Type) {
+            case 0:
+                mTvDay.setTextColor(Color.parseColor("#ff25294e"));
+                break;
+            case 1:
+                mTvMonth.setTextColor(Color.parseColor("#ff25294e"));
+                break;
+            case 2:
+                mTvYear.setTextColor(Color.parseColor("#ff25294e"));
+                break;
+        }
+
     }
 
 
+    /*
+    初始化折线图数据
+     */
     private void lineChart() {
-        List<Entry>[] entries = new ArrayList[2];
-        for (int index = 0, len = entries.length; index < len; index++) {
-            ArrayList<Entry> values = new ArrayList<>();
-            for (int i = 0; i < 12; i++) {
-                float val = (float) (Math.random() * 34) + 3;
-                values.add(new Entry(i, val));
-            }
-            entries[index] = values;
-        }
+        ArrayList[] entries = getCharEntity();
         String[] labels = {"label1", "label2"};
         int[] chartColors = {Color.parseColor("#FF3E4ABE"), Color.parseColor("#FFED773C")};
-
-
-        LineChartEntity lineChartEntity = new LineChartEntity(lineChart, entries, labels, chartColors, Color.parseColor("#FF9EA9C3"), 14f);
-        lineChartEntity.drawCircle(true);
-        lineChartEntity.toggleFilled(null, chartColors, false);
-        lineChartEntity.setLineMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
-        lineChartEntity.setEnableDashedLine(true);
+        entity = new LineChartEntity(lineChart, entries, labels, chartColors, Color.parseColor("#FF9EA9C3"), 14f);
+        entity.drawCircle(true);
+        entity.toggleFilled(null, chartColors, true);
+        entity.setLineMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
+        entity.setEnableDashedLine(true);
         final String[] quarters = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"};
         ValueFormatter formatter = new ValueFormatter() {
             @Override
@@ -97,7 +123,20 @@ public class HashRateActivity extends BaseActivity {
 
 
         };
-        lineChartEntity.setXAxisFormatter(formatter);
+        entity.setXAxisFormatter(formatter);
+    }
+
+    private ArrayList[] getCharEntity() {
+        ArrayList[] entries = new ArrayList[2];
+        for (int index = 0, len = entries.length; index < len; index++) {
+            ArrayList<Entry> values = new ArrayList<>();
+            for (int i = 0; i < 12; i++) {
+                float val = (float) (Math.random() * 34) + 3;
+                values.add(new Entry(i, val));
+            }
+            entries[index] = values;
+        }
+        return entries;
     }
 
     private void initView() {
@@ -108,25 +147,27 @@ public class HashRateActivity extends BaseActivity {
             layoutParams.height = BarUtils.getStatusBarHeight();
             barView.setLayoutParams(layoutParams);
         }
-        setAnimation(progressBar,40);
+        setAnimation(progressBar, 40);
 
     }
+
     private void setAnimation(final ProgressBar view, final int mProgressBar) {
         ValueAnimator animator = ValueAnimator.ofInt(0, mProgressBar).setDuration(1000);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                LogUtils.e((int)valueAnimator.getAnimatedValue());
+                LogUtils.e((int) valueAnimator.getAnimatedValue());
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    view.setProgress((Integer) valueAnimator.getAnimatedValue(),true);
-                }else {
+                    view.setProgress((Integer) valueAnimator.getAnimatedValue(), true);
+                } else {
                     view.setProgress((Integer) valueAnimator.getAnimatedValue());
                 }
             }
         });
         animator.start();
     }
-    @OnClick({R.id.m_iv_back, R.id.m_tv_title, R.id.mTvDetail})
+
+    @OnClick({R.id.m_iv_back, R.id.m_tv_title, R.id.mTvDetail, R.id.mTvDay, R.id.mTvMonth, R.id.mTvYear})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.m_iv_back:
@@ -137,7 +178,25 @@ public class HashRateActivity extends BaseActivity {
             case R.id.mTvDetail:
                 showDetailPopup();
                 break;
+            case R.id.mTvDay:
+                setChartLabel(0);
+                changeLabel(0);
+                break;
+            case R.id.mTvMonth:
+                setChartLabel(1);
+                changeLabel(1);
+
+                break;
+            case R.id.mTvYear:
+                setChartLabel(2);
+                changeLabel(2);
+                break;
         }
+    }
+
+    private void changeLabel(int i) {
+        ArrayList[] charEntity = getCharEntity();
+        lineChart();
     }
 
     private void showDetailPopup() {

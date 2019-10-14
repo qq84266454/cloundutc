@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="97dp"
-        android:background="@drawable/shadow_6_7_all"
+        android:background="@drawable/shadow_67_white"
         android:orientation="vertical"
         android:padding="@dimen/dp30">
 
@@ -41,6 +41,7 @@
                 android:textSize="13sp" />
 
             <View
+                android:layout_marginLeft="7dp"
                 android:layout_width="1dp"
                 android:layout_height="13sp"
                 android:layout_gravity="center_vertical"

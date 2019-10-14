@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.cloud.utc.R;
 import com.cloud.utc.adapter.TransactionFgAdapter;
 import com.cloud.utc.base.BaseFragment;
+import com.cloud.utc.utils.UIUtils;
 
 import java.util.ArrayList;
 
@@ -121,11 +122,15 @@ public class TransactionFragment extends HomeBaseFragment implements ViewPager.O
             mTvBuy.setTextColor(getResources().getColor(R.color.white));
             mTvSell.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
             mTvSell.setTextColor(getResources().getColor(R.color.unselect_color));
+            UIUtils.setBoldOrNot(mTvBuy,true);
+            UIUtils.setBoldOrNot(mTvSell,false);
         } else {
             mTvSell.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
             mTvSell.setTextColor(getResources().getColor(R.color.white));
             mTvBuy.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
             mTvBuy.setTextColor(getResources().getColor(R.color.unselect_color));
+            UIUtils.setBoldOrNot(mTvSell,true);
+            UIUtils.setBoldOrNot(mTvBuy,false);
         }
     }
 

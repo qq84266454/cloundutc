@@ -6,6 +6,16 @@ public class SignUpReq {
     private String password_confirmation; //是	string	重复密码
     private String icode;//	是	string	邀请码
 
+    public SignUpReq() {
+    }
+
+    public SignUpReq(String account, String password, String password_confirmation, String icode) {
+        this.account = account;
+        this.password = password;
+        this.password_confirmation = password_confirmation;
+        this.icode = icode;
+    }
+
     @Override
     public String toString() {
         return "SignUpReq{" +

@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@color/general_bg"
     android:layout_height="wrap_content">
 
     <RelativeLayout
@@ -63,6 +64,7 @@
                                 android:layout_toLeftOf="@+id/mTvLabel1"
                                 android:inputType="number"
                                 android:text="4348235"
+                                android:textStyle="bold"
                                 android:textColor="@color/white"
                                 android:textSize="28sp" />
 
@@ -134,11 +136,13 @@
                     android:background="@drawable/btn_index_buy"
                     android:gravity="center"
                     android:text="Buy"
+                    android:textStyle="bold"
                     android:textColor="#FF3E4ABE"
                     android:textSize="14sp" />
             </LinearLayout>
             <!-- 首页的item开始-->
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/index_item"
                 android:layout_marginLeft="@dimen/dp_index_margin"
@@ -157,8 +161,9 @@
                     app:srcCompat="@drawable/icon_group" />
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="40dp"
                     android:layout_marginRight="@dimen/dp_index_margin"
                     android:background="@drawable/dotted_line_vertical"
                     android:layerType="software" />
@@ -199,6 +204,7 @@
                         android:textColor="#ff25294e"
                         android:textSize="18sp" />
 
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -227,9 +233,11 @@
                     app:srcCompat="@drawable/icon_b" />
 
                 <TextView
+                    android:layout_gravity="center_vertical"
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="40dp"
                     android:layout_marginRight="@dimen/dp_index_margin"
+                    android:text="-1.36%"
                     android:background="@drawable/dotted_line_vertical"
                     android:layerType="software" />
 
@@ -242,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_15"
-                        android:text="G/USDT"
+                        android:text="CNY/USDT"
                         android:textColor="#ff9ea9c3"
                         android:textSize="10sp" />
 
@@ -259,14 +267,15 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="@dimen/dp_12"
                     android:layout_marginRight="@dimen/dp_index_margin"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:maxLines="1"
-                        android:text="0.138026"
+                        android:text="0.1380"
                         android:textColor="#ff25294e"
                         android:textSize="18sp" />
 
@@ -274,7 +283,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:text="+3.52%"
+                        android:text="-1.35%"
                         android:textColor="#FF45C75F"
                         android:textSize="13sp" />
                 </LinearLayout>

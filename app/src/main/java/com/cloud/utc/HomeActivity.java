@@ -31,11 +31,11 @@ public class HomeActivity extends BaseActivity {
     private String[] mTitles;
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private int[] mIconUnselectedIds = {
-            R.drawable.icon_qianbao, R.drawable.icon_zhuxing,
-            R.drawable.icon_zhexian, R.drawable.icon_order,R.drawable.icon_me};
+            R.drawable.ic_blance_unselect, R.drawable.icon_zhuxing,
+            R.drawable.ic_getmoney_unselect, R.drawable.ic_order_unselect,R.drawable.ic_me_unselect};
     private int[] mIconSelectIds = {
-            R.drawable.icon_qianbao, R.drawable.icon_zhuxing,
-            R.drawable.icon_get_select, R.drawable.icon_order,R.drawable.icon_me};
+            R.drawable.icon_qianbao, R.drawable.ic_trade,
+            R.drawable.ic_getmoney, R.drawable.ic_order,R.drawable.ic_me_select};
     private int mCurrentFragmentIndex = 0;
 
     @Override

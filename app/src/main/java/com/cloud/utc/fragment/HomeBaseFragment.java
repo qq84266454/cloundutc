@@ -54,9 +54,6 @@ public abstract class HomeBaseFragment extends BaseFragment {
         }
         initData();
         BusProvider.register(this);
-//        if (this instanceof NewHomeAskFragment) {
-//            return;
-//        }
         isLoad = true;
     }
 

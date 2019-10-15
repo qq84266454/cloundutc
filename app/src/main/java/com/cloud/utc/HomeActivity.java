@@ -49,7 +49,7 @@ public class HomeActivity extends BaseActivity {
 
     private void initView() {
         initFragment();
-        mTitles = new String[]{"Balances", "Transaction", "Order", "Settings","Me"};
+        mTitles = new String[]{"Balances", "Trade", "Getmoney", "Order","Me"};
         initTabItem();
     }
     private void initTabItem() {

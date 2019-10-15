@@ -1,7 +1,10 @@
 package com.cloud.utc.http;
 
 
+import com.cloud.utc.base.Constants;
+import com.cloud.utc.bean.IdentificationReq;
 import com.cloud.utc.bean.IdentificationResp;
+import com.cloud.utc.bean.ImageUploadResp;
 import com.cloud.utc.bean.LoginReq;
 import com.cloud.utc.bean.LoginResp;
 import com.cloud.utc.bean.NoBodyModel;
@@ -10,10 +13,14 @@ import com.cloud.utc.bean.SignUpResp;
 import com.cloud.utc.bean.UserInfoResp;
 
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Query;
 
 /**
  * Created by ex-lvchaofeng001 on 2017/8/11.
@@ -32,9 +39,13 @@ public interface ApiService {
     @POST("authorizations")
     Call<LoginResp> doSignIn(@Body LoginReq req);
 
+
     // 身份识别接口
     @GET("identification")
     Call<IdentificationResp> doIdentification();
+    // 身份保存接口
+    @POST("identification")
+    Call<IdentificationResp> doIdentificationTwo(@Body IdentificationReq req);
 
 
     // 发送邮件接口
@@ -89,8 +100,18 @@ public interface ApiService {
 //    Call<BaseModel> doFeedback(@Query("contactMobile") String mobile, @Query("adviceContent") String content);
 //
 //
-//    @Multipart
-//    @POST("api/feedback/advicefeedback")
-//    Call<BaseModel> doFeedback(@Query("contactMobile") String mobile, @Query("adviceContent") String content,
-//                               @Part MultipartBody.Part[] parts);
+    @Multipart
+    @POST("images")
+    Call<ImageUploadResp> doImage(@Query("type") String type,
+                                     @Part MultipartBody.Part parts);
+//    for (int i = 0; i < size; i++) {
+//        if (uriList.get(i) == null) {
+//            parts[i] = MultipartBody.Part.createFormData("file", "");
+//        } else {
+//            File file = new File(UriUtils.getRealPathFromUri(this, uriList.get(i)));
+//            RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+//            MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
+//            parts[i] = filePart;
+//        }
+//    }
 }

@@ -5,6 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical">
     <ImageView
+        android:id="@+id/mIvQRCode"
         android:background="@color/default_color"
         android:layout_gravity="center"
         android:layout_width="144dp"

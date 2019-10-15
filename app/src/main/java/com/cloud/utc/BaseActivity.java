@@ -14,6 +14,8 @@ import com.blankj.utilcode.util.BarUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.cloud.utc.event.BusProvider;
 import com.cloud.utc.event.EventBusInfo;
+import com.cloud.utc.http.ApiRequest;
+import com.cloud.utc.http.ApiService;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 
@@ -38,10 +40,13 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    protected ApiService getApiService() {
+        return ApiRequest.getInstance().create(ApiService.class);
+    }
 
     protected BaseActivity instance;
 
-    protected QMUITipDialog showLoading(int iconType, String msg) {
+    protected QMUITipDialog newTipDialog(int iconType, String msg) {
         return new QMUITipDialog.Builder(this)
                 .setIconType(iconType)
                 .setTipWord(msg)

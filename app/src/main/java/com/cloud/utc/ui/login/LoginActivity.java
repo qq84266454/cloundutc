@@ -75,8 +75,8 @@ public class LoginActivity extends BaseActivity {
                 startActivity(new Intent(this, PwdForgottenActivity.class));
                 break;
             case R.id.mTvSignIn:
-//                doLogin();
-                goMain();
+                doLogin();
+//                goMain();
                 break;
         }
     }
@@ -94,7 +94,7 @@ public class LoginActivity extends BaseActivity {
             return;
         }
         LoginReq loginReq = new LoginReq(email, pwd);
-        QMUITipDialog signing_in = showLoading(QMUITipDialog.Builder.ICON_TYPE_LOADING, "Signing in");
+        QMUITipDialog signing_in = newTipDialog(QMUITipDialog.Builder.ICON_TYPE_LOADING, "Signing in");
         ApiRequest.getInstance().create(ApiService.class).doSignIn(loginReq).enqueue(new RequestCallback<LoginResp>() {
             @Override
             public void onFinish() {

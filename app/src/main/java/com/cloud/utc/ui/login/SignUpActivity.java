@@ -7,7 +7,6 @@ import android.widget.EditText;
 import com.blankj.utilcode.util.ToastUtils;
 import com.cloud.utc.BaseActivity;
 import com.cloud.utc.R;
-import com.cloud.utc.bean.BaseModel;
 import com.cloud.utc.bean.ErrorModel;
 import com.cloud.utc.bean.SignUpReq;
 import com.cloud.utc.bean.SignUpResp;
@@ -62,7 +61,7 @@ public class SignUpActivity extends BaseActivity {
         String pwd2 = mEtPwd2.getText().toString();
         String invitation = mEtInvitation.getText().toString();
         SignUpReq signUpReq = new SignUpReq(email, pwd, pwd2, invitation);
-        QMUITipDialog signUpTip = showLoading(QMUITipDialog.Builder.ICON_TYPE_LOADING, "Signing up");
+        QMUITipDialog signUpTip = newTipDialog(QMUITipDialog.Builder.ICON_TYPE_LOADING, "Signing up");
         signUpTip.show();
         ApiRequest.getInstance().create(ApiService.class).doSignUp(signUpReq).enqueue(new RequestCallback<SignUpResp>() {
 

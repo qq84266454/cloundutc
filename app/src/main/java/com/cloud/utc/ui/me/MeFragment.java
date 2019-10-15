@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.blankj.utilcode.util.EncodeUtils;
 import com.blankj.utilcode.util.ImageUtils;
 import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.SPUtils;
 import com.cloud.utc.R;
 import com.cloud.utc.bean.UserInfoResp;
 import com.cloud.utc.fragment.HomeBaseFragment;
@@ -118,8 +119,10 @@ public class MeFragment extends HomeBaseFragment {
         mTvName.setText(resp.getName());
         mIvInvCode.setText(resp.getIcode());
         mTvNodeValue.setText(resp.getNode_address());
-//        String pre = "data:image/png;base64";
+        String pre = "data:image/png;base64";
 //        mIvQRCode.setImageBitmap(ImageUtils.bytes2Bitmap(EncodeUtils.base64Decode(resp.getIcode_qrcode().substring(pre.length()))));
+        if (resp.getIcode_qrcode() != null)
+            SPUtils.getInstance().put("qr_code", resp.getIcode_qrcode().substring(pre.length()));
 
     }
 }

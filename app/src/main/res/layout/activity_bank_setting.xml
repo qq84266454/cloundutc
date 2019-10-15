@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp30"
+    android:paddingRight="@dimen/dp30">
+    <include layout="@layout/layout_top" />
+    <include layout="@layout/top_bar" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/mTvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Name"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:hint="请输入姓名"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+
+            <TextView
+                android:id="@+id/mTvBankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Bank name"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:hint="Required"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+
+            <TextView
+                android:id="@+id/mTvBankInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Bank Info"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtBankInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:hint="Option"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+
+            <TextView
+                android:id="@+id/mTvBankAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Bank account"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtBankAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:hint="Required"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+
+            <TextView
+                android:id="@+id/mTvConfirmAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Confirm account"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtConfirmAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:hint="Required"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+            <TextView
+                android:id="@+id/mTvFundPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:text="Fund Password"
+                android:textColor="@color/general_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mEtFundPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_et_bg_ffffff"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:hint="Required"
+                android:textColor="@color/general_black"
+                android:textColorHint="#FF9EA9C3" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
